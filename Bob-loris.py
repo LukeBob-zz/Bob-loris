@@ -67,7 +67,7 @@ class MainThread:
 
 def main():
     try:
-        parser = argparse.ArgumentParser(description="Bob-loris, low bandwidth stress test tool for websites")
+        parser = argparse.ArgumentParser(description="Bob-loris, low bandwidth Dos tool for websites")
         parser.add_argument("-M", "--max-sock", help="maximum synchronus connections to the server, Default=150")
         parser.add_argument("-H", "--host", help="Target host.")
         parser.add_argument("-P", "--port", help="Target port")
