@@ -1,3 +1,5 @@
 # Bob-Loris
 
-**Setup and run**
+**Setup**
+
+``` git clone
