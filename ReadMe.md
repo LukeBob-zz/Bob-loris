@@ -2,7 +2,7 @@
 
 **Setup**
 
-       ``` $ git clone https://github.com/LukeBob/Bob-loris.git
+       ```$ git clone https://github.com/LukeBob/Bob-loris.git
  
         $ cd Bob-loris
  
