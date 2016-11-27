@@ -1,4 +1,4 @@
-# Bob-Loris #
+# Bob-Loris 
 
 **Setup**
 
@@ -30,7 +30,7 @@
 	   Sending Keep Alive Headers... Socket Count: 150
 	   Sending Keep Alive Headers... Socket Count: 150
 
- # Tor-Loris #
+# Tor-Loris 
  
 **Setup**
 
