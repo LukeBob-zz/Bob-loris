@@ -145,7 +145,7 @@ def main():
 
     except KeyboardInterrupt:
         print '\t\n\n Exiting!..\n\n'
-         os.system('service tor stop && sleep 1')
+        os.system('service tor stop && sleep 1')
         sys.exit(0)
 
 if __name__ == '__main__':
