@@ -1,7 +1,7 @@
 #!/usr/bin/python2.7
 #
 # Tor Version of Bob-loris
-#
+# Requires Tor, on linux apt-get install tor
 # Original slowloris.py creator gkbrk, github: https://github.com/gkbrk/
 #
 # Author: lukeBob
